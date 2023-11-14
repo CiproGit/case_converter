@@ -1,0 +1,8 @@
+#ifndef CONFIG_H
+#define CONFIG_H
+
+#define VERSION_MAJOR @case_converter_VERSION_MAJOR@
+#define VERSION_MINOR @case_converter_VERSION_MINOR@
+#define VERSION_PATCH @case_converter_VERSION_PATCH@
+
+#endif // CONFIG_H
