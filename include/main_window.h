@@ -1,6 +1,7 @@
 #ifndef MAIN_WINDOW_H
 #define MAIN_WINDOW_H
 
+#include "about.h"
 #include <QMainWindow>
 
 QT_BEGIN_NAMESPACE
@@ -14,6 +15,7 @@ private:
 	Ui::Main_window *ui;
 	QString input_string;
 	QString output_string;
+	About about;
 
 	void convert();
 
@@ -24,5 +26,8 @@ private slots:
 public:
 	Main_window(QWidget *parent = nullptr);
 	~Main_window();
+
+public slots:
+	void show_about();
 };
 #endif // MAIN_WINDOW_H

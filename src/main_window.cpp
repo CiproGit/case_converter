@@ -7,6 +7,8 @@ Main_window::Main_window(QWidget *parent) : QMainWindow(parent), ui(new Ui::Main
 	connect(ui->input_textEdit, SIGNAL(textChanged()), this, SLOT(on_textChanged()));
 	connect(ui->upper_checkBox, SIGNAL(clicked()), this, SLOT(on_stateChanged()));
 	connect(ui->snake_checkBox, SIGNAL(clicked()), this, SLOT(on_stateChanged()));
+
+	connect(ui->about_action, SIGNAL(triggered()), this, SLOT(show_about()));
 }
 
 Main_window::~Main_window() {
@@ -35,3 +37,6 @@ void Main_window::on_stateChanged() {
 	convert();
 }
 
+void Main_window::show_about() {
+	this->about.show();
+}
