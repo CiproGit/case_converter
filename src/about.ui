@@ -13,6 +13,7 @@
   <property name="font">
    <font>
     <family>Arial</family>
+    <pointsize>9</pointsize>
    </font>
   </property>
   <property name="windowTitle">
@@ -39,6 +40,7 @@
      <property name="font">
       <font>
        <family>Arial</family>
+       <pointsize>9</pointsize>
       </font>
      </property>
      <property name="frameShape">
@@ -64,6 +66,7 @@ li.checked::marker { content: &quot;\2612&quot;; }
      <property name="font">
       <font>
        <family>Arial</family>
+       <pointsize>9</pointsize>
       </font>
      </property>
      <property name="autoFillBackground">
@@ -92,6 +95,7 @@ li.checked::marker { content: &quot;\2612&quot;; }
      <property name="font">
       <font>
        <family>Arial</family>
+       <pointsize>9</pointsize>
       </font>
      </property>
      <property name="frameShape">
