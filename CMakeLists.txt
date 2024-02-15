@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.5)
 
-project(case_converter VERSION 1.0.0 LANGUAGES CXX)
+project(case_converter VERSION 1.0.1 LANGUAGES CXX)
 
 set(CMAKE_INCLUDE_CURRENT_DIR ON) # Add build directory to include path
 
@@ -20,6 +20,8 @@ file(GLOB HEADERS include/*.h)
 
 # Settings for Windows
 if (${CMAKE_SYSTEM_NAME} MATCHES "Windows")
+    set(CMAKE_EXE_LINKER_FLAGS "-static") # Link statically all the libraries to create a standalone executable
+
     add_compile_definitions(APP_NAME="${PROJECT_NAME}") # Name in Windows properties
     configure_file(version.rc.in version.rc) # Set VERSIONINFO file
 
