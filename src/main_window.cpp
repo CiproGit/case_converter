@@ -15,7 +15,6 @@ Main_window::~Main_window() {
 	delete ui;
 }
 
-
 void Main_window::convert() {
 	if (ui->upper_checkBox->isChecked()) this->output_string = this->input_string.toUpper();
 	else this->output_string = this->input_string.toLower();

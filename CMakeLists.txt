@@ -17,6 +17,7 @@ include_directories(include)
 
 file(GLOB SOURCES src/*.cpp src/*.ui)
 file(GLOB HEADERS include/*.h)
+set(RESOURCES res/resources.qrc) # Set Qt resources
 
 # Settings for Windows
 if (${CMAKE_SYSTEM_NAME} MATCHES "Windows")
@@ -32,10 +33,17 @@ endif()
 
 # Settings for Mac OS
 if (${CMAKE_SYSTEM_NAME} MATCHES "Darwin")
+    # Set Mac OS resources
+    set(MACOSX_BUNDLE_ICON_FILE case_converter_icon.icns)
+    set(MACOSX_RESOURCES res/case_converter_icon.icns)
+    set_source_files_properties(${MACOSX_RESOURCES} PROPERTIES
+        MACOSX_PACKAGE_LOCATION "Resources"
+    )
+
     set(CMAKE_OSX_DEPLOYMENT_TARGET "11.0") # Set minimum target to Mac OS Big Sur
 endif()
 
-add_executable(${PROJECT_NAME} ${SOURCES} ${HEADERS} ${WIN32_RESOURCES})
+add_executable(${PROJECT_NAME} ${SOURCES} ${HEADERS} ${RESOURCES} ${WIN32_RESOURCES} ${MACOSX_RESOURCES})
 
 configure_file(config.h.in config.h) # Set config header file
 
