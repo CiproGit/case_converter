@@ -1,8 +1,10 @@
 #include "main_window.h"
-#include "./ui_main_window.h"
+#include "ui_main_window.h"
 
 Main_window::Main_window(QWidget *parent) : QMainWindow(parent), ui(new Ui::Main_window) {
 	ui->setupUi(this);
+
+	this->setWindowTitle(APPLICATION_NAME);
 
 	connect(ui->input_textEdit, SIGNAL(textChanged()), this, SLOT(on_textChanged()));
 	connect(ui->upper_checkBox, SIGNAL(clicked()), this, SLOT(on_stateChanged()));
@@ -14,7 +16,6 @@ Main_window::Main_window(QWidget *parent) : QMainWindow(parent), ui(new Ui::Main
 Main_window::~Main_window() {
 	delete ui;
 }
-
 
 void Main_window::convert() {
 	if (ui->upper_checkBox->isChecked()) this->output_string = this->input_string.toUpper();

@@ -15,8 +15,9 @@
     <family>Arial</family>
    </font>
   </property>
-  <property name="windowTitle">
-   <string>Case Converter</string>
+  <property name="windowIcon">
+   <iconset resource="../res/resources.qrc">
+    <normaloff>:/case_converter_icon.png</normaloff>:/case_converter_icon.png</iconset>
   </property>
   <widget class="QWidget" name="central_widget">
    <layout class="QVBoxLayout" name="verticalLayout_3">
@@ -45,7 +46,7 @@
            <property name="font">
             <font>
              <family>Arial</family>
-             <pointsize>10</pointsize>
+             <pointsize>12</pointsize>
             </font>
            </property>
           </widget>
@@ -91,7 +92,7 @@
            <property name="font">
             <font>
              <family>Arial</family>
-             <pointsize>10</pointsize>
+             <pointsize>12</pointsize>
             </font>
            </property>
           </widget>
@@ -132,6 +133,8 @@
    </property>
   </action>
  </widget>
- <resources/>
+ <resources>
+  <include location="../res/resources.qrc"/>
+ </resources>
  <connections/>
 </ui>
