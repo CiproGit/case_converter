@@ -19,6 +19,9 @@ file(GLOB SOURCES src/*.cpp src/*.ui)
 file(GLOB HEADERS include/*.h)
 set(RESOURCES res/resources.qrc) # Set Qt resources
 
+set(APPLICATION_NAME "Case Converter")
+add_compile_definitions(APPLICATION_NAME="${APPLICATION_NAME}")
+
 # Settings for Windows
 if (${CMAKE_SYSTEM_NAME} MATCHES "Windows")
     set(CMAKE_EXE_LINKER_FLAGS "-static") # Link statically all the libraries to create a standalone executable
@@ -50,9 +53,10 @@ configure_file(config.h.in config.h) # Set config header file
 target_link_libraries(${PROJECT_NAME} PRIVATE Qt6::Widgets)
 
 set_target_properties(${PROJECT_NAME} PROPERTIES
-    OUTPUT_NAME "Case Converter"
+    OUTPUT_NAME ${APPLICATION_NAME}
     WIN32_EXECUTABLE TRUE
     MACOSX_BUNDLE TRUE
+    MACOSX_BUNDLE_BUNDLE_NAME ${APPLICATION_NAME}
     MACOSX_BUNDLE_BUNDLE_VERSION ${PROJECT_VERSION}
     MACOSX_BUNDLE_SHORT_VERSION_STRING ${PROJECT_VERSION_MAJOR}.${PROJECT_VERSION_MINOR}.${PROJECT_VERSION_PATCH}
 )

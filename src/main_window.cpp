@@ -4,6 +4,8 @@
 Main_window::Main_window(QWidget *parent) : QMainWindow(parent), ui(new Ui::Main_window) {
 	ui->setupUi(this);
 
+	this->setWindowTitle(APPLICATION_NAME);
+
 	connect(ui->input_textEdit, SIGNAL(textChanged()), this, SLOT(on_textChanged()));
 	connect(ui->upper_checkBox, SIGNAL(clicked()), this, SLOT(on_stateChanged()));
 	connect(ui->snake_checkBox, SIGNAL(clicked()), this, SLOT(on_stateChanged()));
