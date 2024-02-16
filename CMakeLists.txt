@@ -31,7 +31,7 @@ if (${CMAKE_SYSTEM_NAME} MATCHES "Windows")
 
     # Set Windows resources
     enable_language("RC")
-    set(WIN32_RESOURCES ${PROJECT_BINARY_DIR}/version.rc)
+    set(WIN32_RESOURCES res/resources.rc ${PROJECT_BINARY_DIR}/version.rc)
 endif()
 
 # Settings for Mac OS
