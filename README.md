@@ -1,7 +1,11 @@
+<img src="res/case_converter_icon.png" width="200"/>
+
 # case_converter
 
 ## Description
 **Case Converter** converts any input string to upper case and/or snake case.
+
+<img src="res/screenshots/main.png"/>
 
 Case Converter contains:
 * the executable Case Converter.
@@ -22,3 +26,9 @@ Just put Case Converter where you want.
 2. Enter the string to convert
 3. Choose the desired conversion type
 4. Get the converted string.
+
+## Credits
+Developed by Federico Cipressi with Qt framework.
+
+## Contributing
+If you have ideas, improvements or proposals, feel free to open an issue or a pull request.
